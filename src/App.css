@@ -4,9 +4,11 @@
 
 /* EXERCISE LIST STYLING */
 .exercise_container {
-  border: 3px solid blue;
-  width: 80vw;
-  margin: auto;
+  border: 5px solid royalblue;
+  width: 65vw;
+  margin: 20px auto ;
+  border-radius: 0.25em;
+  background-color: cornsilk;
 }
 
 .exercise_reps {
@@ -20,9 +22,29 @@
   justify-content: space-around;
 }
 
+.exercise_title {
+  font-weight: 600;
+  padding-top: 10px;
+  color:rgb(62 61 58);
+  margin-bottom: 5px;
+}
+
 .exercise_extra_info {
   display: flex;
   justify-content: space-around;
+}
+
+.reps, .sets, .X {
+  margin: 0 5px;
+  font-weight: 400;
+  color:rgb(62 61 58);
+}
+
+.rest {
+  align-self: center;
+  margin: 0;
+  font-weight: 400;
+  color:rgb(62 61 58);
 }
 
 /* FORM STYLING */
@@ -35,9 +57,14 @@
 /* SINGLE EXERCISE */
 i {
   color: blue;
-  margin: 0 20px 10px;
+  margin: 10px 20px 10px;
 }
 
 i:hover {
   cursor: pointer;
+}
+
+/* FAVORITE STYLING */
+.remove_button {
+  color: red;
 }

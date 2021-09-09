@@ -4,6 +4,7 @@ import './App.css';
 import Form from './pages/Form';
 import SingleExercise from './pages/SingleExercise';
 import AllExercises from './pages/AllExercises';
+import Favorites from './pages/Favorites';
 
 
 function App(props) {
@@ -76,6 +77,7 @@ function App(props) {
       /////////
   const addFavorites = (exercise) => {
     setFavorites([...favorites, exercise])
+    alert("Added to Favorites")
   };
 
   const removeFavorites = (exercise) => {
@@ -96,7 +98,9 @@ function App(props) {
   return (
     <div className="App">
       <h1>myFitness Exercise List</h1>
-      <Link to="/new"><button>New Exercise</button></Link>
+      <Link to="/"><button style={{backgroundColor: "#3737b9", border: "black", marginRight:"10px"}}>Home</button></Link>
+      <Link to="/new"><button style={{backgroundColor: "#3737b9", border: "black", marginRight:"10px"}}>Create New Exercise</button></Link>
+      <Link to="/favorites"><button style={{backgroundColor: "#3737b9", border: "black", marginRight:"10px"}}>My Favorites</button></Link>
       <Switch>
         <Route
           exact
@@ -140,6 +144,17 @@ function App(props) {
               currentExercise={targetExercise}
               handleSubmit={updateExercise}
               buttonLabel="update exercise"
+            />
+          )}
+        />
+        <Route
+          path="/favorites"
+          render={(routerprops) => (
+            <Favorites
+              {...routerprops}
+              favorites={favorites}
+              remove={removeFavorites}
+              buttonLabel="remove favorite"
             />
           )}
         />

@@ -9,15 +9,15 @@ const SingleExercise = ({ exercises, match, edit, deleteExercise, addFavorites }
   return (
       <div className="exercise_container">
         <div className="exercise_title_block">
-            <h1>{exercise.title}</h1>
-            <h4>Rest(seconds): {exercise.rest}</h4>
+            <h1 className="exercise_title">{exercise.title}</h1>
+            <div className="exercise_reps">
+                <h3 className="reps">{exercise.reps} Reps</h3>
+                <h4 className="X">X</h4>
+                <h3 className="sets">{exercise.sets} Sets</h3>
+            </div>
         </div>
         <div className="exercise_extra_info">
-        <div className="exercise_reps">
-                <h4>{exercise.reps} Reps</h4>
-                <h6>X</h6>
-                <h4>{exercise.sets} Sets</h4>
-            </div>
+            <h3 className="rest">Rest: {exercise.rest} seconds</h3>
         </div>
         <div className="buttons">
           <Link to="/">

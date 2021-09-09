@@ -65,7 +65,7 @@ const Form = ({currentExercise, handleSubmit, buttonLabel, history}) => {
         <option value="true">True</option>
         <option value="false">False</option>
       </select>
-      <input type="submit" value={buttonLabel} />
+      <input style={{backgroundColor: "#3737b9", border: "black"}} type="submit" value={buttonLabel} />
     </form>
   )
 };

@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import "../App.css"
 
-const Exercise = ({exercise}) => {
+const FavoriteExercise = ({exercise, remove}) => {
 
 
     return(
@@ -20,9 +20,10 @@ const Exercise = ({exercise}) => {
             <Link to={`/exercise/${exercise.id}`}>
                 <i class="fas fa-2x fa-info-circle"></i>
             </Link>
+            <a onClick={()=> remove(exercise)}><i class="fas fa-2x fa-minus-circle remove_button"></i></a>
         </div>
     </div>
     )
 };
 
-export default Exercise;
+export default FavoriteExercise;
